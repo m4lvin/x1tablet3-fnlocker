@@ -590,8 +590,8 @@ static const struct hid_device_id lenovo_devices[]
 
 MODULE_DEVICE_TABLE(hid, lenovo_devices);
 
-static struct hid_driver lenovo_driver = {
-    .name = "lenovo",
+static struct hid_driver mylenovo_driver = {
+    .name = "mylenovo",
     .id_table = lenovo_devices,
     .input_mapping = lenovo_input_mapping_tpx1cover,
     .probe = lenovo_probe,
@@ -599,6 +599,6 @@ static struct hid_driver lenovo_driver = {
     .event = lenovo_event_tpx1cover,
 };
 
-module_hid_driver(lenovo_driver);
+module_hid_driver(mylenovo_driver);
 
 MODULE_LICENSE("GPL");
